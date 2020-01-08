@@ -1,0 +1,71 @@
+Requisitos:
+Instalar OpenJDK8U-jdk_x64_linux_hotspot_8u232b09.tar.gz
+Instalar apache-maven-3.6.3-bin.tar.gz
+
+Ubicarse dentro de la carpeta del Proyecto y ejecutar:
+mvn spring-boot:run
+
+Usar REST POST para registrar ordenes:
+http://localhost:8080/orders
+
+Ruta para ver la Base de Datos:
+http://localhost:8080/h2-console
+
+Datos del formulario:
+url=jdbc:h2:mem:labananadb
+username=sa
+password=
+
+Input 1:
+{
+   "orders":[
+      {
+         "id":1,
+         "user":"juan",
+         "type":"ask",
+         "size":2.0,
+         "value":1.0
+      },
+      {
+         "id":2,
+         "user":"pedro",
+         "type":"bid",
+         "size":1.5,
+         "value":1.5
+      },
+      {
+         "id":3,
+         "user":"juan",
+         "type":"ask",
+         "size":3.0,
+         "value":2.0
+      },
+      {
+         "id":4,
+         "user":"pepe",
+         "type":"bid",
+         "size":4.0,
+         "value":3.0
+      }
+   ]
+}
+
+Input 2:
+{
+   "orders":[
+      {
+         "id":5,
+         "user":"XXX",
+         "type":"ask",
+         "size":2.0,
+         "value":1.0
+      },
+      {
+         "id":6,
+         "user":"YYY",
+         "type":"bid",
+         "size":1.5,
+         "value":1.5
+      }
+   ]
+}
